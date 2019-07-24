@@ -1,1 +1,17 @@
-<p>room works!</p>
+<mat-card class="example-card">
+  <mat-card-header class="card-header">
+    <mat-card-title
+      ><i class="material-icons" style="color: white">location_on</i
+      >{{ name }}</mat-card-title
+    >
+  </mat-card-header>
+
+  <mat-card-content>
+    <h3 class="visitors">Visitors</h3>
+    <div class="layer-container">
+      <div class="layered" *ngFor="let user of checkedInUsers">
+        <app-user [size]="62" [user]="user" [isBordered]="true"></app-user>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
