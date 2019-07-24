@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule as NgrxStoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { UserEffects } from '../user/user.effects';
+import { UserService } from '../user/user.service';
 import { reducers } from './reducers';
 
 @NgModule({
@@ -11,7 +14,12 @@ import { reducers } from './reducers';
         strictActionImmutability: true
       }
     }),
-    EffectsModule.forRoot([])
-  ]
+    EffectsModule.forRoot([UserEffects]),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: false
+    })
+  ],
+  providers: [UserService]
 })
 export class StoreModule {}
