@@ -2,8 +2,8 @@
 
 exports[`OverviewComponent should match the snapshot 1`] = `
 <app-overview>
-  <p>
-    overview works!
-  </p>
+  <h1>
+    Overview
+  </h1>
 </app-overview>
 `;
