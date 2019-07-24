@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { State } from './shared/store/reducers';
-import { loadUsers } from './shared/user/user.actions';
-import { User } from './shared/user/user.model';
+import { RoomFacade } from './shared/room/room.facade';
+import { UserFacade } from './shared/user/user.facade';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +8,8 @@ import { User } from './shared/user/user.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  users$: Observable<Array<User>> = this.store.select(
-    (state: State) => state.user.users
-  );
-
-  constructor(private store: Store<State>) {
-    this.store.dispatch(loadUsers());
+  constructor(private userFacade: UserFacade, private roomFacade: RoomFacade) {
+    this.userFacade.loadUsers();
+    this.roomFacade.loadRooms();
   }
 }
