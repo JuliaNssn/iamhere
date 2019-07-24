@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable } from '@angular/core';
-import { CheckIn, CHECKIN_API_URL } from './checkin.model';
+import { HttpClient } from "@angular/common/http";
+import { Inject, Injectable } from "@angular/core";
+import { CHECKIN_API_URL, UserAndRoom } from "./checkin.model";
 
 @Injectable()
 export class CheckinService {
@@ -9,11 +9,11 @@ export class CheckinService {
     @Inject(CHECKIN_API_URL) private apiUrl: string
   ) {}
 
-  checkIn(userAndRoom: CheckIn): void {
+  checkIn(userAndRoom: UserAndRoom): void {
     this.httpClient.post(`${this.apiUrl}/checkin`, userAndRoom);
   }
 
-  checkOut(userAndRoom: CheckIn): void {
+  checkOut(userAndRoom: UserAndRoom): void {
     this.httpClient.post(`${this.apiUrl}/checkout`, userAndRoom);
   }
 }
