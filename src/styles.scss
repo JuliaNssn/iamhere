@@ -3,9 +3,12 @@
 html,
 body {
   height: 100%;
-  background-image: radial-gradient(49% 100%, #b50203 50%, #4b0000 99%);
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.h-100 {
+  height: 100% !important;
 }
