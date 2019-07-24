@@ -5,6 +5,6 @@ export interface UserAndRoom {
   room: string;
 }
 
-export const CHECKIN_API_URL: InjectionToken<string> = new InjectionToken<
+export const CHECK_IN_API_URL: InjectionToken<string> = new InjectionToken<
   string
->('CHECKIN_API_URL');
+>('CHECK_IN_API_URL');

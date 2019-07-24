@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckInComponent should match the snapshot 1`] = `
+<app-check-in>
+  <p>
+    check-in works!
+  </p>
+</app-check-in>
+`;

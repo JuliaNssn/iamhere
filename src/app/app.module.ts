@@ -5,18 +5,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CheckInModule } from './check-in/check-in.module';
 import { OverviewModule } from './overview/overview.module';
-import { CheckinDataAccessModule } from './shared/checkin/data-access/checkin-data-access.module';
+import { CheckInDataAccessModule } from './shared/check-in/data-access/check-in-data-access.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    CheckinDataAccessModule.forRoot(environment.apiUrl),
+    CheckInDataAccessModule.forRoot(environment.apiUrl),
     AppRoutingModule,
     OverviewModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    CheckInModule
   ],
   bootstrap: [AppComponent]
 })

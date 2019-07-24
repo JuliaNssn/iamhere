@@ -1,12 +1,12 @@
 import { HttpClient } from "@angular/common/http";
 import { Inject, Injectable } from "@angular/core";
-import { CHECKIN_API_URL, UserAndRoom } from "./checkin.model";
+import { CHECK_IN_API_URL, UserAndRoom } from "./check-in.model";
 
 @Injectable()
-export class CheckinService {
+export class CheckInService {
   constructor(
     private httpClient: HttpClient,
-    @Inject(CHECKIN_API_URL) private apiUrl: string
+    @Inject(CHECK_IN_API_URL) private apiUrl: string
   ) {}
 
   checkIn(userAndRoom: UserAndRoom): void {

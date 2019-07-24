@@ -1,21 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { CHECKIN_API_URL } from './checkin.model';
-import { CheckinService } from './checkin.service';
+import { CHECK_IN_API_URL } from './check-in.model';
+import { CheckInService } from './check-in.service';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule],
-  providers: [CheckinService]
+  providers: [CheckInService]
 })
-export class CheckinDataAccessModule {
+export class CheckInDataAccessModule {
   static forRoot(apiUrl: string): ModuleWithProviders {
     return {
-      ngModule: CheckinDataAccessModule,
+      ngModule: CheckInDataAccessModule,
       providers: [
-        CheckinService,
+        CheckInService,
         {
-          provide: CHECKIN_API_URL,
+          provide: CHECK_IN_API_URL,
           useValue: apiUrl
         }
       ]
