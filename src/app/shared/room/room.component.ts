@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { User } from './../user/user.model';
 
 @Component({
   selector: 'app-room',
   templateUrl: './room.component.html',
-  styleUrls: ['./room.component.sass']
+  styleUrls: ['./room.component.scss']
 })
-export class RoomComponent implements OnInit {
+export class RoomComponent {
+  @Input()
+  roomImage: string;
 
-  constructor() { }
+  @Input()
+  name: string;
 
-  ngOnInit() {
-  }
-
+  @Input()
+  checkedInUsers: User[];
 }

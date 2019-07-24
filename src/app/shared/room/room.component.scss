@@ -1,0 +1,26 @@
+mat-card {
+  padding: 0;
+}
+
+.example-card {
+  max-width: 300px;
+}
+
+.card-header {
+  width: 300px;
+  height: 200px;
+  background-image: url('../../../assets/elbe.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  color: white;
+}
+
+.layered {
+  width: 40px;
+}
+
+.layer-container {
+  display: -webkit-box;
+}
