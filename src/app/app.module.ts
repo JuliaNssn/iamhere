@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CheckInModule } from './check-in/check-in.module';
 import { OverviewModule } from './overview/overview.module';
 import { CheckInDataAccessModule } from './shared/check-in/data-access/check-in-data-access.module';
+import { StoreModule } from './shared/store/store.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +19,8 @@ import { CheckInDataAccessModule } from './shared/check-in/data-access/check-in-
     OverviewModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    CheckInModule
+    CheckInModule,
+    StoreModule
   ],
   bootstrap: [AppComponent]
 })
