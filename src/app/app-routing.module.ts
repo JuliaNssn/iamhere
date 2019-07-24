@@ -11,6 +11,11 @@ const routes: Routes = [
   {
     path: 'check-in',
     component: CheckInComponent
+  },
+  {
+    path: '*',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 

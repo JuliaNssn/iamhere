@@ -18,7 +18,7 @@ $iamhere-accent: mat-palette($mat-pink, A200, A100, A400);
 $iamhere-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$iamhere-theme: mat-light-theme(
+$iamhere-theme: mat-dark-theme(
   $iamhere-primary,
   $iamhere-accent,
   $iamhere-warn
