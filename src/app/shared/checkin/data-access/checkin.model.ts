@@ -1,6 +1,6 @@
 import { InjectionToken } from '@angular/core';
 
-export interface CheckIn {
+export interface UserAndRoom {
   user: string;
   room: string;
 }
