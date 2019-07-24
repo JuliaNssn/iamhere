@@ -7,13 +7,10 @@
   </mat-card-header>
 
   <mat-card-content>
+    <h3 class="visitors">Visitors</h3>
     <div class="layer-container">
-      <div class="layered">
-        <app-user
-          *ngFor="let user of checkedInUsers"
-          [size]="50"
-          [user]="user"
-        ></app-user>
+      <div class="layered" *ngFor="let user of checkedInUsers">
+        <app-user [size]="62" [user]="user" [isBordered]="true"></app-user>
       </div>
     </div>
   </mat-card-content>

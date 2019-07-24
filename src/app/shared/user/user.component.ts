@@ -13,4 +13,7 @@ export class UserComponent {
 
   @Input()
   size: number;
+
+  @Input()
+  isBordered: boolean;
 }

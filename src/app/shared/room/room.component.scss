@@ -1,5 +1,21 @@
 mat-card {
   padding: 0;
+  margin: 0 auto;
+  background: #C13C3C;
+  color: white !important;
+}
+
+mat-card-content {
+  padding: 16px;
+}
+
+mat-card-title {
+  margin-top: 16px;
+  display: flex;
+}
+
+.visitors {
+  font-weight: 100;
 }
 
 .example-card {
@@ -13,14 +29,13 @@ mat-card {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
-  color: white;
 }
 
 .layered {
-  width: 40px;
+  width: 45px;
 }
 
 .layer-container {
   display: -webkit-box;
+  width: fit-content;
 }
