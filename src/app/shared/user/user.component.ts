@@ -12,8 +12,11 @@ export class UserComponent {
   user: User;
 
   @Input()
-  size: number;
+  size = 50;
 
   @Input()
   isBordered: boolean;
+
+  @Input()
+  isSelected: boolean;
 }

@@ -1,4 +1,23 @@
 <div class="container">
-  {{ users$ | async | json }}
-  {{ rooms$ | async | json }}
+  <div class="row text-center">
+    <h1 class="col">
+      Check in as ...
+    </h1>
+  </div>
+  <div class="row text-center block m-4">
+    <ng-container *ngFor="let user of users$ | async">
+      <app-user [user]="user" size="80"></app-user>
+      <label class="f-100">{{ user.name }}</label>
+    </ng-container>
+  </div>
+  <div class="row text-center mb-4">
+    <h2 class="col">
+      in
+    </h2>
+  </div>
+  <div class="row text-center">
+    <ng-container *ngFor="let room of rooms$ | async">
+      <app-room [name]="room.name" class="hover-effect m-2"></app-room>
+    </ng-container>
+  </div>
 </div>

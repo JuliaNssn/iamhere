@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { User } from '../user/data-access/user.model';
 
 @Component({
@@ -15,6 +16,9 @@ export class RoomComponent {
 
   @Input()
   checkedInUsers: User[];
+
+  @Input()
+  userIsCheckedIn = false;
 
   get hasUsers(): boolean {
     return this.checkedInUsers ? this.checkedInUsers.length > 0 : false;

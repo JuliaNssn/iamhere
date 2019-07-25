@@ -1,14 +1,15 @@
-import { Component } from "@angular/core";
-import { Observable } from "rxjs";
-import { Room } from "../shared/room/data-access/room.model";
-import { RoomFacade } from "../shared/room/room.facade";
-import { User } from "../shared/user/data-access/user.model";
-import { UserFacade } from "../shared/user/user.facade";
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Room } from '../shared/room/data-access/room.model';
+import { RoomFacade } from '../shared/room/room.facade';
+import { User } from '../shared/user/data-access/user.model';
+import { UserFacade } from '../shared/user/user.facade';
 
 @Component({
-  selector: "app-check-in",
-  templateUrl: "./check-in.component.html",
-  styleUrls: ["./check-in.component.sass"]
+  selector: 'app-check-in',
+  templateUrl: './check-in.component.html',
+  styleUrls: ['./check-in.component.scss']
 })
 export class CheckInComponent {
   users$: Observable<Array<User>> = this.userFacade.users$;

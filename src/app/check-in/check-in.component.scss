@@ -1,0 +1,17 @@
+:host {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  &.block {
+    display: block;
+  }
+}
+
+.f-100 {
+  font-weight: 100;
+}
