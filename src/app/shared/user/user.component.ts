@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { User } from './data-access/user.model';
 
 @Component({
@@ -11,8 +12,11 @@ export class UserComponent {
   user: User;
 
   @Input()
-  size: number;
+  size = 50;
 
   @Input()
   isBordered: boolean;
+
+  @Input()
+  isSelected = false;
 }

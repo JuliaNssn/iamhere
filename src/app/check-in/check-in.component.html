@@ -1,4 +1,36 @@
-<div class="container">
-  {{ users$ | async | json }}
-  {{ rooms$ | async | json }}
+<div class="container" *ngIf="!isLoading; else spinner">
+  <div class="row text-center">
+    <h1 class="col">
+      Check in as ...
+    </h1>
+  </div>
+  <div class="row text-center flex m-4">
+    <div *ngFor="let user of users$ | async" class="block-100 m-3">
+      <app-user [user]="user" [isSelected]="true" size="80"></app-user>
+      <label class="f-100" [ngClass]="{ selected: true }">{{
+        user.name
+      }}</label>
+    </div>
+  </div>
+  <div class="row text-center mb-4">
+    <h2 class="col">
+      in
+    </h2>
+  </div>
+  <div class="row text-center">
+    <ng-container *ngFor="let room of rooms$ | async; index as index">
+      <app-room
+        [name]="room.name"
+        [userIsCheckedIn]="index === 1"
+        (click)="onCheckIn(room)"
+        class="hover-effect m-2"
+      ></app-room>
+    </ng-container>
+  </div>
 </div>
+
+<ng-template #spinner>
+  <div class="span-full">
+    <img class="spinner" src="assets/loading-spinner.gif" />
+  </div>
+</ng-template>
