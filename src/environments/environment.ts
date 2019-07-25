@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:4200'
+  checkInApiUrl: 'http://localhost:4200',
+  userApiUrl:
+    'http://checkin-users.apps.cluster-fra-24cc.fra-24cc.openshiftworkshop.com'
 };
 
 /*
