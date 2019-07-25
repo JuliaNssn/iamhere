@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { map, switchMap } from "rxjs/operators";
+import { Room } from "./data-access/room.model";
+import { RoomService } from "./data-access/room.service";
 import { RoomActionTypes, roomsLoaded } from "./room.actions";
-import { Room } from "./room.model";
-import { RoomService } from "./room.service";
 
 @Injectable()
 export class RoomEffects {

@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { loadRooms } from './room.actions';
-import { Room } from './room.model';
-import { RoomState } from './room.reducer';
-import { roomQueries } from './room.selector';
+import { Injectable } from "@angular/core";
+import { Store } from "@ngrx/store";
+import { Observable } from "rxjs";
+import { Room } from "./data-access/room.model";
+import { loadRooms } from "./room.actions";
+import { RoomState } from "./room.reducer";
+import { roomQueries } from "./room.selector";
 
 @Injectable()
 export class RoomFacade {

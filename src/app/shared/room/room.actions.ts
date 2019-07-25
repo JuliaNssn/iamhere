@@ -1,10 +1,10 @@
-import { createAction, props } from '@ngrx/store';
-import { Room } from './room.model';
+import { createAction, props } from "@ngrx/store";
+import { Room } from "./data-access/room.model";
 
 export enum RoomActionTypes {
-  LoadRooms = '[Rooms] Load Rooms',
-  RoomsLoaded = '[Rooms] Rooms Loaded',
-  LoadRoomsError = '[Rooms] Load Rooms Error'
+  LoadRooms = "[Rooms] Load Rooms",
+  RoomsLoaded = "[Rooms] Rooms Loaded",
+  LoadRoomsError = "[Rooms] Load Rooms Error"
 }
 
 export const loadRooms = createAction(RoomActionTypes.LoadRooms);

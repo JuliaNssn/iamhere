@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { map, switchMap } from 'rxjs/operators';
+import { User } from './data-access/user.model';
+import { UserService } from './data-access/user.service';
 import { UserActionTypes, usersLoaded } from './user.actions';
-import { User } from './user.model';
-import { UserService } from './user.service';
 
 @Injectable()
 export class UserEffects {

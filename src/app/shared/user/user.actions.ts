@@ -1,10 +1,10 @@
-import { createAction, props } from '@ngrx/store';
-import { User } from './user.model';
+import { createAction, props } from "@ngrx/store";
+import { User } from "./data-access/user.model";
 
 export enum UserActionTypes {
-  LoadUsers = '[Users] Load Users',
-  UsersLoaded = '[Users] Users Loaded',
-  LoadUsersError = '[Users] Load Users Error'
+  LoadUsers = "[Users] Load Users",
+  UsersLoaded = "[Users] Users Loaded",
+  LoadUsersError = "[Users] Load Users Error"
 }
 
 export const loadUsers = createAction(UserActionTypes.LoadUsers);

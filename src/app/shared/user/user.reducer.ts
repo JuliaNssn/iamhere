@@ -1,6 +1,6 @@
-import { createReducer, on } from '@ngrx/store';
-import { fromUserActions } from './user.actions';
-import { User } from './user.model';
+import { createReducer, on } from "@ngrx/store";
+import { User } from "./data-access/user.model";
+import { fromUserActions } from "./user.actions";
 
 export interface UserState {
   users: Array<User>;

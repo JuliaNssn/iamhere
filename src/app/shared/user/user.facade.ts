@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { loadUsers } from './user.actions';
-import { User } from './user.model';
-import { UserState } from './user.reducer';
-import { userQueries } from './user.selectors';
+import { Injectable } from "@angular/core";
+import { Store } from "@ngrx/store";
+import { Observable } from "rxjs";
+import { User } from "./data-access/user.model";
+import { loadUsers } from "./user.actions";
+import { UserState } from "./user.reducer";
+import { userQueries } from "./user.selectors";
 
 @Injectable()
 export class UserFacade {

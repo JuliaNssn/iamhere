@@ -1,6 +1,6 @@
-import { createReducer, on } from '@ngrx/store';
-import { fromRoomsActions } from './room.actions';
-import { Room } from './room.model';
+import { createReducer, on } from "@ngrx/store";
+import { Room } from "./data-access/room.model";
+import { fromRoomsActions } from "./room.actions";
 
 export interface RoomState {
   rooms: Array<Room>;
