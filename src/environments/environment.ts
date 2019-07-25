@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   checkIn: {
-    triggerApiUrl: 'http://localhost:4200',
+    triggerApiUrl:
+      'http://roomio-checkin-api-checkin-scala.apps.cluster-fra-24cc.fra-24cc.openshiftworkshop.com',
     sourceApiUrl:
       'http://tracker.apps.cluster-fra-24cc.fra-24cc.openshiftworkshop.com/checkins'
   },

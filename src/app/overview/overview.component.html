@@ -1,5 +1,8 @@
 <div class="container mt-5">
-  <div class="d-flex justify-content-center">
+  <div
+    class="d-flex justify-content-center"
+    *ngIf="!userIsCheckedIn; else clock"
+  >
     <button class="btn-check-in" mat-raised-button routerLink="/check-in">
       Check In
     </button>
@@ -9,8 +12,10 @@
       class="m-2"
       *ngFor="let room of rooms$ | async"
       [name]="room.name"
-      [checkedInUsers]="room.users"
     ></app-room>
   </div>
-  {{ checkIns$ | async | json }}
 </div>
+
+<ng-template #clock>
+  <h1 class="text-center display-1">{{ now | date: "HH:mm" }}</h1>
+</ng-template>

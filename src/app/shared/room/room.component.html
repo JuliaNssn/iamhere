@@ -16,9 +16,13 @@
       <ng-container *ngIf="hasUsers; else emptyRoom">
         <h3 class="visitors">Visitors</h3>
         <div class="layer-container">
-          <div class="layered" *ngFor="let user of checkedInUsers">
+          <div
+            class="layered"
+            *ngFor="let user of checkedInUsers | slice: 0:5; index as index"
+          >
             <app-user [size]="62" [user]="user" [isBordered]="true"></app-user>
           </div>
+          <div *ngIf="tooMuchUsers">+{{ checkedInUsers.length - 5 }}</div>
         </div>
       </ng-container>
 

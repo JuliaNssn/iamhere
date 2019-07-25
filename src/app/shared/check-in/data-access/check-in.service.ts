@@ -17,9 +17,9 @@ export class CheckInService implements OnDestroy {
     @Inject(CHECK_IN_SOURCE_API_URL) private sourceApiUrl: string
   ) {
     this.eventSource = new EventSource(this.sourceApiUrl);
-    this.eventSource.addEventListener('message', message =>
-      this.checkIns$.next(JSON.parse(message.data))
-    );
+    this.eventSource.addEventListener('message', message => {
+      this.checkIns$.next(JSON.parse(message.data));
+    });
   }
 
   checkIn(userAndRoom: UserAndRoom): void {

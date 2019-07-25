@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { CheckInFacade } from '../shared/check-in/check-in.facade';
-import { UserAndRoom } from '../shared/check-in/data-access/check-in.model';
 import { Room } from '../shared/room/data-access/room.model';
 import { RoomFacade } from '../shared/room/room.facade';
 
@@ -12,10 +12,17 @@ import { RoomFacade } from '../shared/room/room.facade';
 })
 export class OverviewComponent {
   rooms$: Observable<Array<Room>> = this.roomFacade.rooms$;
-  checkIns$: Observable<Array<UserAndRoom>> = this.checkInFacade.checkIns$;
+
+  userIsCheckedIn = false;
+
+  now: Date = new Date();
 
   constructor(
     private roomFacade: RoomFacade,
     private checkInFacade: CheckInFacade
-  ) {}
+  ) {
+    setInterval(() => {
+      this.now = new Date();
+    }, 1);
+  }
 }

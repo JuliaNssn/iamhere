@@ -18,7 +18,7 @@ import { UserDataAccessModule } from './shared/user/data-access/user-data-access
     BrowserModule,
     CheckInDataAccessModule.forRoot(
       environment.checkIn.triggerApiUrl,
-      environment.checkIn.triggerApiUrl
+      environment.checkIn.sourceApiUrl
     ),
     UserDataAccessModule.forRoot(environment.userApiUrl),
     RoomDataAccessModule,
