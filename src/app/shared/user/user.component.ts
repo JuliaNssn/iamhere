@@ -15,4 +15,10 @@ export class UserComponent {
 
   @Input()
   isBordered: boolean;
+
+  get avatarUrl(): string {
+    return `https://via.placeholder.com/150/6FB5BF/FFFFFF/?text=${
+      this.user.name
+    }`;
+  }
 }

@@ -12,9 +12,6 @@
       <div class="layered" *ngFor="let user of checkedInUsers">
         <app-user [size]="62" [user]="user" [isBordered]="true"></app-user>
       </div>
-      <div>
-        {{ checkedInUsers.length }}
-      </div>
     </div>
   </mat-card-content>
 </mat-card>

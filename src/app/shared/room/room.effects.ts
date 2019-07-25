@@ -18,15 +18,10 @@ export class RoomEffects {
       map(([userAndRoom, rooms]) => {
         console.log(userAndRoom);
         return rooms.map(room => {
-          let users = [...room.users];
-          if (room.users.length > 0) {
-            users = room.users.reduce((acc, curr) => {
-              if (curr.name !== userAndRoom.name) {
-                return [...acc, curr];
-              }
-              return [...acc, curr];
-            }, []);
-          }
+          let users = [
+            ...room.users.filter(user => user.name !== userAndRoom.name)
+          ];
+
           if (userAndRoom.room === room.name) {
             users = [
               {
