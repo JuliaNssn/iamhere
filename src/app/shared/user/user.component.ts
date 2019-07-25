@@ -18,5 +18,5 @@ export class UserComponent {
   isBordered: boolean;
 
   @Input()
-  isSelected: boolean;
+  isSelected = true;
 }
