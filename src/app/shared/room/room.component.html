@@ -18,11 +18,13 @@
         <div class="layer-container">
           <div
             class="layered"
-            *ngFor="let user of checkedInUsers | slice: 0:5; index as index"
+            *ngFor="let user of checkedInUsers | slice: 0:4; index as index"
           >
             <app-user [size]="62" [user]="user" [isBordered]="true"></app-user>
           </div>
-          <div *ngIf="tooMuchUsers">+{{ checkedInUsers.length - 5 }}</div>
+          <div class="many-users" *ngIf="tooMuchUsers">
+            +{{ checkedInUsers.length - 4 }}
+          </div>
         </div>
       </ng-container>
 

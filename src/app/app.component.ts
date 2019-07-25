@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { CheckInFacade } from './shared/check-in/check-in.facade';
 import { RoomFacade } from './shared/room/room.facade';
 import { UserFacade } from './shared/user/user.facade';
@@ -16,6 +17,6 @@ export class AppComponent {
   ) {
     this.userFacade.loadUsers();
     this.roomFacade.loadRooms();
-    this.checkInFacade.loadCheckIns();
+    // this.checkInFacade.loadCheckIns();
   }
 }

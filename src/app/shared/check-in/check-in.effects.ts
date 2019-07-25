@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { mergeMap, skip, switchMap, tap, withLatestFrom } from 'rxjs/operators';
+
 import { addUserToRoom } from '../room/room.actions';
 import { CheckInActionTypes, checkInsLoaded } from './check-in.actions';
 import { CheckInFacade } from './check-in.facade';

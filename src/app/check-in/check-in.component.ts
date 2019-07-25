@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 
 import { User } from '../shared/user/data-access/user.model';
 import { UserFacade } from '../shared/user/user.facade';
+import { CheckInFacade } from './../shared/check-in/check-in.facade';
 import { Room } from './../shared/room/data-access/room.model';
 import { RoomFacade } from './../shared/room/room.facade';
 
@@ -15,15 +16,28 @@ export class CheckInComponent implements OnInit {
   users$: Observable<Array<User>> = this.userFacade.users$;
   rooms$: Observable<Array<Room>> = this.roomFacade.rooms$;
 
+  currentUser = {
+    name: 'Jari'
+  };
+
   isLoading = true;
 
-  constructor(private userFacade: UserFacade, private roomFacade: RoomFacade) {}
+  constructor(
+    private userFacade: UserFacade,
+    private roomFacade: RoomFacade,
+    private checkinFacade: CheckInFacade
+  ) {}
 
   ngOnInit() {
     setTimeout(() => {
       this.isLoading = false;
-    }, 3000);
+    }, 1500);
   }
 
-  onCheckIn(room: Room) {}
+  onCheckIn(room: Room) {
+    this.checkinFacade.checkIn({
+      name: this.currentUser.name,
+      room: room.name
+    });
+  }
 }

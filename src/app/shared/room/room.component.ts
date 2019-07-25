@@ -24,6 +24,6 @@ export class RoomComponent {
   }
 
   get tooMuchUsers(): boolean {
-    return this.checkedInUsers ? this.checkedInUsers.length > 5 : false;
+    return this.checkedInUsers ? this.checkedInUsers.length > 4 : false;
   }
 }

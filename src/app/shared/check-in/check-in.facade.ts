@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { loadCheckIns } from './check-in.actions';
+
+import { checkIn, loadCheckIns } from './check-in.actions';
 import { CheckInState } from './check-in.reducer';
 import { checkInQueries } from './check-in.selector';
 import { UserAndRoom } from './data-access/check-in.model';
@@ -18,5 +19,9 @@ export class CheckInFacade {
 
   loadCheckIns() {
     this.store.dispatch(loadCheckIns());
+  }
+
+  checkIn(name: string, room: string) {
+    this.store.dispatch(checkIn({ payload: { userAndRoom: { name, room } } }));
   }
 }
