@@ -11,10 +11,13 @@ export class UserComponent {
   user: User;
 
   @Input()
-  size: number;
+  size = 50;
 
   @Input()
   isBordered: boolean;
+
+  @Input()
+  isSelected = false;
 
   get avatarUrl(): string {
     return `https://via.placeholder.com/150/6FB5BF/FFFFFF/?text=${

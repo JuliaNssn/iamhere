@@ -7,11 +7,18 @@ mat-card {
 
 mat-card-content {
   padding: 16px;
+  height: 200px
 }
 
 mat-card-title {
   margin-top: 16px;
   display: flex;
+}
+
+.text-center {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .visitors {
@@ -25,7 +32,7 @@ mat-card-title {
 .card-header {
   width: 300px;
   height: 200px;
-  background-image: url('../../../assets/elbe.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url('../../../assets/main.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -38,4 +45,23 @@ mat-card-title {
 .layer-container {
   display: -webkit-box;
   width: fit-content;
+}
+
+
+.not-checked-in {
+  border: 3px solid transparent;
+  margin-top: 30px;
+}
+
+.checked-in {
+  border: 3px solid #6FB5BF;
+  margin-top: 0px;
+}
+
+.checked-in::before {
+  height: 30px;
+  display: block;
+  content: "You sit here";
+  background-color: #6FB5BF;
+  font-size: 20px;
 }

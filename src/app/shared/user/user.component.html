@@ -1,1 +1,7 @@
-<img [style.height.px]="size" [class.bordered]="isBordered" [src]="avatarUrl" />
+<img
+  [style.height.px]="size"
+  [class.bordered]="isBordered"
+  [class.selected]="isSelected"
+  src="avatarUrl"
+/>
+<span>{{ user.name }}</span>

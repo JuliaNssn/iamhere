@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { User } from '../user/data-access/user.model';
 
 @Component({
@@ -14,5 +15,35 @@ export class RoomComponent {
   name: string;
 
   @Input()
-  checkedInUsers: User[];
+  checkedInUsers: User[] = [
+    {
+      name: 'test'
+    },
+    {
+      name: 'test'
+    },
+    {
+      name: 'test'
+    },
+    {
+      name: 'test'
+    },
+    {
+      name: 'test'
+    },
+    {
+      name: 'test'
+    }
+  ];
+
+  @Input()
+  userIsCheckedIn = false;
+
+  get hasUsers(): boolean {
+    return this.checkedInUsers ? this.checkedInUsers.length > 0 : false;
+  }
+
+  get tooMuchUsers(): boolean {
+    return this.checkedInUsers ? this.checkedInUsers.length > 5 : false;
+  }
 }
