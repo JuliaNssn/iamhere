@@ -1,31 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-
-import { User } from '../shared/user/user.model';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Room } from '../shared/room/data-access/room.model';
+import { RoomFacade } from '../shared/room/room.facade';
 
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss']
 })
-export class OverviewComponent implements OnInit {
-  users: User[];
+export class OverviewComponent {
+  rooms$: Observable<Array<Room>> = this.roomFacade.rooms$;
 
-  constructor() {}
-
-  ngOnInit() {
-    this.users = [
-      {
-        name: 'Jari Möllenbernd'
-      },
-      {
-        name: 'Madita Schöner'
-      },
-      {
-        name: 'Julia Nissen'
-      },
-      {
-        name: 'Marco Klaassen'
-      }
-    ];
-  }
+  constructor(private roomFacade: RoomFacade) {}
 }

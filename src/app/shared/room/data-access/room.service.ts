@@ -6,7 +6,25 @@ export class RoomService {
     return of([
       {
         name: 'Main',
-        users: []
+        users: [
+          {
+            name: 'Bat Man'
+          },
+          {
+            name: 'Super Man'
+          },
+          {
+            name: 'Iron Man'
+          }
+        ]
+      },
+      {
+        name: 'Spree',
+        users: [
+          {
+            name: 'Mad Man'
+          }
+        ]
       }
     ]);
   }
