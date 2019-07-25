@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import * as faker from 'faker';
-import { CHECK_IN_API_URL } from './check-in.model';
+import { CHECK_IN_SOURCE_API_URL } from './check-in.model';
 import { CheckInService } from './check-in.service';
 import { userAndRoomFactory } from './testing/checkin.data';
 
@@ -17,7 +17,7 @@ describe('CheckinService', () => {
       providers: [
         CheckInService,
         {
-          provide: CHECK_IN_API_URL,
+          provide: CHECK_IN_SOURCE_API_URL,
           useValue: apiUrl
         }
       ]

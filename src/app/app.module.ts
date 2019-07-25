@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CheckInModule } from './check-in/check-in.module';
 import { OverviewModule } from './overview/overview.module';
 import { CheckInDataAccessModule } from './shared/check-in/data-access/check-in-data-access.module';
+import { RoomDataAccessModule } from './shared/room/data-access/room-data-access.module';
 import { StoreModule } from './shared/store/store.module';
 import { UserDataAccessModule } from './shared/user/data-access/user-data-access.module';
 
@@ -15,8 +16,12 @@ import { UserDataAccessModule } from './shared/user/data-access/user-data-access
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    CheckInDataAccessModule.forRoot(environment.checkInApiUrl),
+    CheckInDataAccessModule.forRoot(
+      environment.checkIn.triggerApiUrl,
+      environment.checkIn.triggerApiUrl
+    ),
     UserDataAccessModule.forRoot(environment.userApiUrl),
+    RoomDataAccessModule,
     AppRoutingModule,
     OverviewModule,
     BrowserAnimationsModule,
