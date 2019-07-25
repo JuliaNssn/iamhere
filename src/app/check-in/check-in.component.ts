@@ -35,9 +35,6 @@ export class CheckInComponent implements OnInit {
   }
 
   onCheckIn(room: Room) {
-    this.checkinFacade.checkIn({
-      name: this.currentUser.name,
-      room: room.name
-    });
+    this.checkinFacade.checkIn(this.currentUser.name, room.name);
   }
 }
