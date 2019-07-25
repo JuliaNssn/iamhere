@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-
 import { User } from '../user/data-access/user.model';
 
 @Component({
@@ -15,26 +14,7 @@ export class RoomComponent {
   name: string;
 
   @Input()
-  checkedInUsers: User[] = [
-    {
-      name: 'test'
-    },
-    {
-      name: 'test'
-    },
-    {
-      name: 'test'
-    },
-    {
-      name: 'test'
-    },
-    {
-      name: 'test'
-    },
-    {
-      name: 'test'
-    }
-  ];
+  checkedInUsers: User[];
 
   @Input()
   userIsCheckedIn = false;

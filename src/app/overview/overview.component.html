@@ -12,6 +12,7 @@
       class="m-2"
       *ngFor="let room of rooms$ | async"
       [name]="room.name"
+      [checkedInUsers]="room.users"
     ></app-room>
   </div>
 </div>
