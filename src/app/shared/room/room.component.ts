@@ -15,4 +15,8 @@ export class RoomComponent {
 
   @Input()
   checkedInUsers: User[];
+
+  get hasUsers(): boolean {
+    return this.checkedInUsers ? this.checkedInUsers.length > 0 : false;
+  }
 }
